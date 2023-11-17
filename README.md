@@ -80,5 +80,5 @@ java -cp Tools.jar GeneratePatches patched_joined output.zip src
 If you have previously generated patches between 'patched_joined' and a source with fixed project problems, you can use them as follows:
 
 ```bash
-java -cp Tools.jar ApplyPatches src patched_output patches rejects_optifine
+java -cp Tools.jar ApplyPatches src patched_output patches rejects
 ```
