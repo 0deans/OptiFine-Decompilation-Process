@@ -32,7 +32,7 @@ java -cp "optifine.jar" optifine.Patcher client.jar optifine.jar patched.jar
 #### Step 2: Working with files and renaming
 
 1. Copy the files from the "patched.jar/notch" directory to the "merge.jar" file (replace if necessary).
-2. Save the "assets" folder from "patched.jar". You will need this folder later.
+2. Save the "assets" folder from "patched.jar". You will need this folder later in MCP-Reborn.
 
 ```bash
 java -jar ForgeAutoRenamingTool-1.0.2-all.jar --input merge.jar --output rename.jar --map mergeMappings.jar --cfg libraries.txt --ann-fix --ids-fix --src-fix --record-fix
