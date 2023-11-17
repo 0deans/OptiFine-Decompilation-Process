@@ -6,16 +6,12 @@
 2. Minecraft launches without any issues.
 
 ## Tools and Files
-
 ### Tools:
-
 1. [MCP-Reborn (Minecraft Coder Pack - Reborn)](https://github.com/Hexeption/MCP-Reborn)
 2. ForgeAutoRenamingTool-1.0.2-all.jar
 3. ForgeFlower-2.0.629.0.jar
 4. [Tools](https://github.com/0deans/Tools)
-
 ### Files:
-
 1. [OptiFine](https://www.optifine.net/downloads)
 2. client.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\downloadClient
 3. merge.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\merge
@@ -25,7 +21,6 @@
 7. mappings.zip: Located in <path_to_your_MCP-Reborn>\build
 
 ## Steps
-
 ### Step 1: Patching with OptiFine
 
 Use OptiFine to apply the necessary patches. The patched Minecraft files will be neatly stored in the "patched.jar/notch" directory.
