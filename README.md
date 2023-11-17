@@ -68,7 +68,7 @@ java -cp Tools.jar Srg2Mcp mappings.zip patched_joined
 After completing these steps, you may need to fix some issues with your project.
 The final source code is placed in the "patched_joined" folder.
 
-### Additional Tips
+### Additional
 #### To generate new patches, use the following command:
 
 ```bash
