@@ -55,7 +55,9 @@ Extract the "joined" folder from the archive before running the command.
 java -cp Tools.jar ApplyPatches decompiled.jar patched_joined joined rejects_joined
 ```
 
-#### Step 5: Rename SRG Names
+### Step 5: Add the "mcp" folder from "mcp_config.zip/config/inject" to the "patched_joined" folder
+
+#### Step 6: Rename SRG Names
 
 ```bash 
 java -cp Tools.jar Srg2Mcp mappings.zip patched_joined
