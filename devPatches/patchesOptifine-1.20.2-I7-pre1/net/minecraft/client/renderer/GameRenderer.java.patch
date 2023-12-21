@@ -1,0 +1,12 @@
+--- a/net/minecraft/client/renderer/GameRenderer.java
++++ b/net/minecraft/client/renderer/GameRenderer.java
+@@ -1882,9 +1882,6 @@
+    }
+ 
+    public static record ResourceCache(ResourceProvider original, Map<ResourceLocation, Resource> cache) implements ResourceProvider {
+-      private final ResourceProvider original;
+-      private final Map<ResourceLocation, Resource> cache;
+-
+       public Optional<Resource> getResource(ResourceLocation p_251007_) {
+          Resource resource = this.cache.get(p_251007_);
+          return resource != null ? Optional.of(resource) : this.original.getResource(p_251007_);

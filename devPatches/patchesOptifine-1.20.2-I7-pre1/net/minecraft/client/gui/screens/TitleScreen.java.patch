@@ -1,0 +1,14 @@
+--- a/net/minecraft/client/gui/screens/TitleScreen.java
++++ b/net/minecraft/client/gui/screens/TitleScreen.java
+@@ -372,11 +372,6 @@
+    }
+ 
+    static record WarningLabel(Font font, MultiLineLabel label, int x, int y) {
+-      private final Font font;
+-      private final MultiLineLabel label;
+-      private final int x;
+-      private final int y;
+-
+       public void render(GuiGraphics pGuiGraphics, int pColor) {
+          this.label.renderBackgroundCentered(pGuiGraphics, this.x, this.y, 9, 2, 2097152 | Math.min(pColor, 1426063360));
+          this.label.renderCentered(pGuiGraphics, this.x, this.y, 9, 16777215 | pColor);

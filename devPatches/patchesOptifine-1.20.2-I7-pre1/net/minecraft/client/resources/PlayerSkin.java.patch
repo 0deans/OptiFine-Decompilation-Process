@@ -1,0 +1,16 @@
+--- a/net/minecraft/client/resources/PlayerSkin.java
++++ b/net/minecraft/client/resources/PlayerSkin.java
+@@ -4,13 +4,6 @@
+ import net.minecraft.resources.ResourceLocation;
+ 
+ public record PlayerSkin(ResourceLocation texture, String textureUrl, ResourceLocation capeTexture, ResourceLocation elytraTexture, PlayerSkin.Model model, boolean secure) {
+-   private final ResourceLocation texture;
+-   private final String textureUrl;
+-   private final ResourceLocation capeTexture;
+-   private final ResourceLocation elytraTexture;
+-   private final PlayerSkin.Model model;
+-   private final boolean secure;
+-
+    public ResourceLocation capeTexture() {
+       return this.capeTexture;
+    }

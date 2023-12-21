@@ -1,0 +1,32 @@
+--- a/net/minecraft/client/renderer/entity/EntityRenderDispatcher.java
++++ b/net/minecraft/client/renderer/entity/EntityRenderDispatcher.java
+@@ -109,9 +109,9 @@
+       if (pEntity instanceof AbstractClientPlayer abstractclientplayer) {
+          PlayerSkin.Model playerskin$model = abstractclientplayer.getSkin().model();
+          EntityRenderer<? extends Player> entityrenderer = this.playerRenderers.get(playerskin$model);
+-         return entityrenderer != null ? entityrenderer : this.playerRenderers.get(PlayerSkin.Model.WIDE);
++         return entityrenderer != null ? (EntityRenderer<? super T>)entityrenderer : (EntityRenderer<? super T>)this.playerRenderers.get(PlayerSkin.Model.WIDE);
+       } else {
+-         return this.renderers.get(pEntity.getType());
++         return (EntityRenderer<? super T>)this.renderers.get(pEntity.getType());
+       }
+    }
+ 
+@@ -428,7 +428,7 @@
+       ReflectorForge.postModLoaderEvent(Reflector.EntityRenderersEvent_AddLayers_Constructor, this.renderers, this.playerRenderers, entityrendererprovider$context);
+    }
+ 
+-   private static void registerPlayerItems(Map<String, EntityRenderer> renderPlayerMap) {
++   private static void registerPlayerItems(Map<PlayerSkin.Model, EntityRenderer<? extends Player>> renderPlayerMap) {
+       boolean flag = false;
+ 
+       for(EntityRenderer entityrenderer : renderPlayerMap.values()) {
+@@ -445,7 +445,7 @@
+ 
+    }
+ 
+-   public Map<EntityType, EntityRenderer> getEntityRenderMap() {
++   public Map<EntityType<?>, EntityRenderer<?>> getEntityRenderMap() {
+       if (this.renderers instanceof ImmutableMap) {
+          this.renderers = new HashMap<>(this.renderers);
+       }

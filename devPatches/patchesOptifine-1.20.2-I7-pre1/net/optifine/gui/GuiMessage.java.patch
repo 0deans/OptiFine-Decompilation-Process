@@ -1,0 +1,20 @@
+--- a/net/optifine/gui/GuiMessage.java
++++ b/net/optifine/gui/GuiMessage.java
+@@ -52,7 +52,7 @@
+    public void setButtonDelay(int ticksUntilEnable) {
+       this.ticksUntilEnable = ticksUntilEnable;
+ 
+-      for(Button button : this.getButtonList()) {
++      for(Button button : (List<Button>)(List<?>) this.getButtonList()) {
+          button.active = false;
+       }
+ 
+@@ -61,7 +61,7 @@
+    public void tick() {
+       super.tick();
+       if (--this.ticksUntilEnable == 0) {
+-         for(Button button : this.getButtonList()) {
++         for(Button button : (List<Button>)(List<?>) this.getButtonList()) {
+             button.active = true;
+          }
+       }

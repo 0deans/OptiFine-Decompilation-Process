@@ -1,0 +1,12 @@
+--- a/net/minecraft/client/gui/components/ChatComponent.java
++++ b/net/minecraft/client/gui/components/ChatComponent.java
+@@ -510,9 +510,6 @@
+    }
+ 
+    static record DelayedMessageDeletion(MessageSignature signature, int deletableAfter) {
+-      private final MessageSignature signature;
+-      private final int deletableAfter;
+-
+       public MessageSignature signature() {
+          return this.signature;
+       }

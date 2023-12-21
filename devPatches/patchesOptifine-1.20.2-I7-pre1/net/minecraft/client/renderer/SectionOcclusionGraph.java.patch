@@ -1,0 +1,22 @@
+--- a/net/minecraft/client/renderer/SectionOcclusionGraph.java
++++ b/net/minecraft/client/renderer/SectionOcclusionGraph.java
+@@ -468,9 +468,6 @@
+    }
+ 
+    static record GraphEvents(LongSet chunksWhichReceivedNeighbors, BlockingQueue<SectionRenderDispatcher.RenderSection> sectionsToPropagateFrom) {
+-      private final LongSet chunksWhichReceivedNeighbors;
+-      private final BlockingQueue<SectionRenderDispatcher.RenderSection> sectionsToPropagateFrom;
+-
+       public GraphEvents() {
+          this(new LongOpenHashSet(), new LinkedBlockingQueue<>());
+       }
+@@ -485,9 +482,6 @@
+    }
+ 
+    static record GraphState(SectionOcclusionGraph.GraphStorage storage, SectionOcclusionGraph.GraphEvents events) {
+-      private final SectionOcclusionGraph.GraphStorage storage;
+-      private final SectionOcclusionGraph.GraphEvents events;
+-
+       public GraphState(int pSize) {
+          this(new SectionOcclusionGraph.GraphStorage(pSize), new SectionOcclusionGraph.GraphEvents());
+       }

@@ -1,0 +1,11 @@
+--- a/net/minecraft/client/renderer/LevelRenderer.java
++++ b/net/minecraft/client/renderer/LevelRenderer.java
+@@ -563,7 +563,7 @@
+                return Component.literal(p_244728_0_.packId());
+             }).orElse((MutableComponent)null);
+             this.minecraft.options.graphicsMode().set(GraphicsStatus.FANCY);
+-            this.minecraft.clearResourcePacksOnError(levelrenderer$transparencyshaderexception, component, (Minecraft.GameLoadCookie)null);
++            this.minecraft.clearResourcePacksOnError(levelrenderer$transparencyshaderexception, component, null);
+          } else {
+             CrashReport crashreport = this.minecraft.fillReport(new CrashReport(s1, levelrenderer$transparencyshaderexception));
+             this.minecraft.options.graphicsMode().set(GraphicsStatus.FANCY);
