@@ -14,10 +14,10 @@
 #### Files:
 1. [OptiFine](https://www.optifine.net/downloads)
 2. client.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\downloadClient
-3. merge.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\merge
-4. mergeMappings.jar.mappings: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\mergeMappings
+3. merge.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\merge (output.jar)
+4. mergeMappings.jar: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\mergeMappings (output.jar)
 5. libraries.txt: Located in <path_to_your_MCP-Reborn>\projects\mcp\build\mcp\listLibraries
-6. mcp_config.zip: Located in <path_to_your_MCP-Reborn>\projects\mcp
+6. mcp_config.zip: Located in <path_to_your_MCP-Reborn>\projects\mcp\build
 7. mappings.zip: Located in <path_to_your_MCP-Reborn>\build
 
 ### Steps
