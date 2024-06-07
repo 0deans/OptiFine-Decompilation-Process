@@ -82,3 +82,21 @@ If you have previously generated patches between 'patched_joined' and a source w
 ```bash
 java -cp Tools.jar ApplyPatches src patched_output patches rejects
 ```
+
+## OptiFine 1.20.6_HD_U_I9_pre1
+
+```bash
+java -jar ForgeAutoRenamingTool-1.0.8-all.jar "--input" "bin\merge.jar" "--output" "renameoutput.jar" "--map" "bin\mergeMappings.jar" "--cfg" "bin\libraries.txt" "--ann-fix" "--ids-fix" "--src-fix" "--record-fix"
+```
+
+```bash
+java -jar vineflower-1.10.1.jar --decompile-inner --remove-bridge --decompile-generics --ascii-strings --remove-synthetic --include-classpath --variable-renaming=jad --ignore-invalid-bytecode --bytecode-source-mapping --dump-code-lines "--indent-string=    " --log-CE -cfg bin\libraries.txt renameoutput.jar decompiled.jar
+```
+
+```bash
+java -cp Tools.jar ApplyPatches decompiled.jar patched_joined bin/joined rejects_joined
+```
+
+```bash
+java -cp Tools.jar Srg2Mcp bin/mappings.zip patched_joined
+```
